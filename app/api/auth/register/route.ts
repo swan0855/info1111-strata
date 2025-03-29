@@ -36,7 +36,8 @@ export async function POST(request: Request) {
     console.log('Generated token');
 
     // Remove password from user object before sending
-    const { password: _, ...userWithoutPassword } = user;
+    const { password: ignored, ...userWithoutPassword } = user;
+    void ignored; // Explicitly ignore the password
 
     return NextResponse.json({
       token,
