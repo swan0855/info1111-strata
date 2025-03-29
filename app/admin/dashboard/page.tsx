@@ -21,14 +21,14 @@ interface RecentActivity {
 
 export default function AdminDashboard() {
   const router = useRouter();
-  const [stats, setStats] = useState<DashboardStats>({
+  const [stats] = useState<DashboardStats>({
     totalUsers: 150,
     activeRequests: 12,
     totalRevenue: 45000,
     pendingApprovals: 5
   });
 
-  const [recentActivity, setRecentActivity] = useState<RecentActivity[]>([
+  const [recentActivity] = useState<RecentActivity[]>([
     {
       type: 'user',
       title: 'New User Registration',

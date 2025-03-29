@@ -49,7 +49,7 @@ export default function Dashboard() {
           className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-8 rounded-2xl border border-white/10"
         >
           <h1 className="text-3xl font-bold text-white">Welcome back, {user?.name || 'User'}</h1>
-          <p className="mt-2 text-gray-400">Here's what's happening with your property</p>
+          <p className="mt-2 text-gray-400">Here&apos;s what&apos;s happening with your property</p>
         </motion.div>
 
         {/* Stats Grid */}
