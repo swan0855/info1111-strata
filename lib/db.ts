@@ -3,10 +3,10 @@ import type { User } from '@/types/user';
 // In-memory database
 const users: User[] = [
   {
-    id: '1',
-    email: '1@1.com',
-    password: '1', 
-    name: '1',
+    id: 'Admin',
+    email: 'admin@example.com',
+    password: '888888', 
+    name: 'Admin',
     role: 'manager',
     createdAt: new Date(),
   },
