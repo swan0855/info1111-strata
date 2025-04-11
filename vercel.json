@@ -3,7 +3,12 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/next"
+      "use": "@vercel/next",
+      "config": {
+        "buildCommand": "npm run build",
+        "installCommand": "npm install",
+        "outputDirectory": ".next"
+      }
     }
   ],
   "routes": [
@@ -17,7 +22,18 @@
     }
   ],
   "env": {
-    "NEXT_PUBLIC_API_URL": "https://info1111-strata-seven.vercel.app/",
+    "NEXT_PUBLIC_API_URL": "https://info1111-strata-seven.vercel.app",
     "NODE_ENV": "production"
-  }
+  },
+  "regions": ["hkg1", "sin1", "syd1"],
+  "crons": [
+    {
+      "path": "/api/cron/cleanup",
+      "schedule": "0 0 * * *"
+    },
+    {
+      "path": "/api/cron/notifications",
+      "schedule": "0 */6 * * *"
+    }
+  ]
 } 
